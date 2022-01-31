@@ -25,7 +25,7 @@ There are 2 libraries are used to implement this project which are
             
 ## Installation Tool
 You can install this setup MSI file if you want to use for personal use. 
-1. [Download CodeViewerSetup.msi](https://github.com/ThanbirTamim/CodeViewer/tree/main/CodeViewerSetup/Debug/CodeViewerSetup.msi) 
+1. [Download CodeViewerSetup.msi](https://github.com/ThanbirTamim/CodeViewer/raw/main/CodeViewerSetup/Debug/CodeViewerSetup.msi) 
 
 
 ## Output
