@@ -21,6 +21,12 @@ There are 2 libraries are used to implement this project which are
             if (String.IsNullOrEmpty(rootDirectory))
                 return;
             treeViewControl = ListDirectory(treeViewControl, rootDirectory);
+            
+            
+## Test (Setup File/ MSI file)
+You can install this setup file for testing poupose. 
+1. [Setup File](https://github.com/ThanbirTamim/CodeViewer/tree/main/CodeViewerSetup/Debug) 
+
 
 ## Output
 Here is the screenshoot of expected output!
