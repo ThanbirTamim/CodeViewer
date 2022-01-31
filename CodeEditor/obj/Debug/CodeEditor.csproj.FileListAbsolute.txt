@@ -12,3 +12,4 @@ D:\Akaaam\CodeEditor\CodeEditor\obj\Debug\CodeEditor.csproj.CoreCompileInputs.ca
 D:\Akaaam\CodeEditor\CodeEditor\obj\Debug\CodeEditor.csproj.CopyComplete
 D:\Akaaam\CodeEditor\CodeEditor\obj\Debug\CodeEditor.exe
 D:\Akaaam\CodeEditor\CodeEditor\obj\Debug\CodeEditor.pdb
+D:\Akaaam\CodeEditor\CodeEditor\obj\Debug\CodeEditor.csproj.AssemblyReference.cache
