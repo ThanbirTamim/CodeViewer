@@ -32,21 +32,27 @@ namespace CodeEditor
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnLoad = new System.Windows.Forms.Button();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.treeViewControl = new System.Windows.Forms.TreeView();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.btnLoad = new System.Windows.Forms.Button();
             this.fastColoredTextBox = new FastColoredTextBoxNS.FastColoredTextBox();
             this.txtCodeView = new System.Windows.Forms.TextBox();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -67,21 +73,24 @@ namespace CodeEditor
             this.splitContainer1.SplitterDistance = 220;
             this.splitContainer1.TabIndex = 0;
             // 
-            // btnLoad
+            // splitContainer2
             // 
-            this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnLoad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnLoad.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoad.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLoad.Image = global::CodeEditor.Properties.Resources.folder;
-            this.btnLoad.Location = new System.Drawing.Point(0, 0);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(220, 35);
-            this.btnLoad.TabIndex = 2;
-            this.btnLoad.Text = "Click to Load Folder";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.treeViewControl);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Size = new System.Drawing.Size(220, 450);
+            this.splitContainer2.SplitterDistance = 414;
+            this.splitContainer2.SplitterWidth = 1;
+            this.splitContainer2.TabIndex = 3;
             // 
             // treeViewControl
             // 
@@ -103,6 +112,22 @@ namespace CodeEditor
             this.imageList.Images.SetKeyName(0, "folder.png");
             this.imageList.Images.SetKeyName(1, "file.png");
             this.imageList.Images.SetKeyName(2, "greenarrow.png");
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLoad.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnLoad.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLoad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoad.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnLoad.Image = global::CodeEditor.Properties.Resources.folder;
+            this.btnLoad.Location = new System.Drawing.Point(0, 0);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(102, 35);
+            this.btnLoad.TabIndex = 2;
+            this.btnLoad.Text = "Load Folder";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // fastColoredTextBox
             // 
@@ -145,24 +170,39 @@ namespace CodeEditor
             this.txtCodeView.Size = new System.Drawing.Size(576, 450);
             this.txtCodeView.TabIndex = 0;
             // 
-            // splitContainer2
+            // splitContainer3
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
             // 
-            // splitContainer2.Panel1
+            // splitContainer3.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.treeViewControl);
+            this.splitContainer3.Panel1.Controls.Add(this.btnLoad);
             // 
-            // splitContainer2.Panel2
+            // splitContainer3.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.btnLoad);
-            this.splitContainer2.Size = new System.Drawing.Size(220, 450);
-            this.splitContainer2.SplitterDistance = 414;
-            this.splitContainer2.SplitterWidth = 1;
-            this.splitContainer2.TabIndex = 3;
+            this.splitContainer3.Panel2.Controls.Add(this.btnSave);
+            this.splitContainer3.Size = new System.Drawing.Size(220, 35);
+            this.splitContainer3.SplitterDistance = 102;
+            this.splitContainer3.SplitterWidth = 1;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSave.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSave.Location = new System.Drawing.Point(0, 0);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(117, 35);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // MainForm
             // 
@@ -178,11 +218,15 @@ namespace CodeEditor
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox)).EndInit();
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -196,6 +240,8 @@ namespace CodeEditor
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

@@ -20,7 +20,8 @@ namespace CodeEditor
             InitializeComponent();
         }
 
-        public string rootDirectory { get; private set; }
+        public string currentSelectFile { get; private set; } = "";
+        public string rootDirectory { get; private set; } = "";
         private TreeView ListDirectory(TreeView treeView, string path)
         {
             treeView.Nodes.Clear();
@@ -36,7 +37,7 @@ namespace CodeEditor
             foreach (var directory in directoryInfo.GetDirectories())
             {
                 directoryNode.Nodes.Add(CreateDirectoryNode(directory));
-                directoryNode.Nodes[directoryNode.Nodes.Count-1].ImageIndex = 0;
+                directoryNode.Nodes[directoryNode.Nodes.Count - 1].ImageIndex = 0;
             }
             foreach (var file in directoryInfo.GetFiles())
             {
@@ -49,7 +50,8 @@ namespace CodeEditor
         private void treeViewControl_AfterSelect(object sender, TreeViewEventArgs e)
         {
             string path = $"{Path.GetDirectoryName(rootDirectory)}\\{e.Node.FullPath}";
-            if(File.Exists(path))
+            currentSelectFile = path;
+            if (File.Exists(path))
                 fastColoredTextBox.Text = File.ReadAllText(path, Encoding.UTF8);
         }
 
@@ -68,6 +70,30 @@ namespace CodeEditor
                 return;
 
             treeViewControl = ListDirectory(treeViewControl, rootDirectory);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!String.IsNullOrEmpty(fastColoredTextBox.Text.Trim()))
+                {
+                    if (DialogResult.Yes == MessageBox.Show("Do you want to Save edited text?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                        if (File.Exists(currentSelectFile))
+                            File.WriteAllText(currentSelectFile, fastColoredTextBox.Text);
+                }
+                else
+                {
+                    if (DialogResult.Yes == MessageBox.Show("Do you want to Save empty?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                        if (File.Exists(currentSelectFile))
+                            File.WriteAllText(currentSelectFile, fastColoredTextBox.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured!", "", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+            }
+                
         }
     }
 }
