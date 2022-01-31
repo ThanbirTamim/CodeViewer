@@ -1,0 +1,14 @@
+D:\Akaaam\CodeEditor\CodeEditor\bin\Release\CodeEditor.exe.config
+D:\Akaaam\CodeEditor\CodeEditor\bin\Release\CodeEditor.exe
+D:\Akaaam\CodeEditor\CodeEditor\bin\Release\CodeEditor.pdb
+D:\Akaaam\CodeEditor\CodeEditor\bin\Release\BetterFolderBrowser.dll
+D:\Akaaam\CodeEditor\CodeEditor\bin\Release\FastColoredTextBox.dll
+D:\Akaaam\CodeEditor\CodeEditor\bin\Release\BetterFolderBrowser.xml
+D:\Akaaam\CodeEditor\CodeEditor\bin\Release\FastColoredTextBox.xml
+D:\Akaaam\CodeEditor\CodeEditor\obj\Release\CodeEditor.MainForm.resources
+D:\Akaaam\CodeEditor\CodeEditor\obj\Release\CodeEditor.Properties.Resources.resources
+D:\Akaaam\CodeEditor\CodeEditor\obj\Release\CodeEditor.csproj.GenerateResource.cache
+D:\Akaaam\CodeEditor\CodeEditor\obj\Release\CodeEditor.csproj.CoreCompileInputs.cache
+D:\Akaaam\CodeEditor\CodeEditor\obj\Release\CodeEditor.csproj.CopyComplete
+D:\Akaaam\CodeEditor\CodeEditor\obj\Release\CodeEditor.exe
+D:\Akaaam\CodeEditor\CodeEditor\obj\Release\CodeEditor.pdb
