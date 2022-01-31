@@ -1,8 +1,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 This project will help you to view source any source code with treeview panel. 
-Check It Out And Happy Coding!!! 
-:-)
+There have few features such as,
+
+-Load Folder
+-Select Folder to view sub-dir and files
+-Select file to view conttent
+-Save edited file's content 
 
 ## Dependency
 There are 2 libraries are used to implement this project which are 
