@@ -25,4 +25,6 @@ There are 2 libraries are used to implement this project which are
 ## Output
 Here is the screenshoot of expected output!
 
+![CHEESE!](test.png)
+
 ![CHEESE!](test.gif)
