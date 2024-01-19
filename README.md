@@ -37,6 +37,14 @@ You can install this setup MSI file if you want to use for personal use.
 ## Output
 Here is the screenshoot of expected output!
 
-![CHEESE!](test.png)
+![CHEESE!](3D%20City/Screenshots/Capture1.png)
 
-![CHEESE!](test.gif)
+![CHEESE!](3D%20City/Screenshots/Capture2.png)
+
+![CHEESE!](3D%20City/Screenshots/Capture3.png)
+
+![CHEESE!](3D%20City/Screenshots/Capture4.png)
+
+![CHEESE!](3D%20City/Screenshots/Capture5.png)
+
+![CHEESE!](3D%20City/Screenshots/Capture6.png)
